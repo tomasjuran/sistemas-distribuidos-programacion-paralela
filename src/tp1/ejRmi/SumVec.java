@@ -28,7 +28,10 @@ public class SumVec implements Tarea<Integer[]>, Serializable {
 		Integer[] resultado = new Integer[vector1.length];
 		for (int i = 0; i < vector1.length; i++) {
 			resultado[i] = vector1[i] + vector2[i];
+			vector1[i] = 0;
 		}
+		System.out.println("¡Me estoy ejecutando desde el servidor!\n"
+				+ "¡Cambié el vector1 a 0, pero el cliente no lo ve!");
 		return resultado;
 	}
 
